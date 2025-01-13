@@ -1,0 +1,78 @@
+  /Subscriber/Action:
+    post:
+      operationId: MobidfjghjleumSubsribe
+      description: gsdgjhjkl
+      summary: vjdkjkjv
+      parameters:
+        
+        - name: uan
+          in: header
+          required: true
+          schema:
+            type: string
+          description: uan
+        - name: MsgId
+          in: header
+          required: true
+          schema:
+            type: string
+          description: MsgId
+        - name: channelId
+          in: header
+          required: true
+          schema:
+            type: string
+          description: channelId
+        - name: IpAddress
+          in: header
+          required: true
+          schema:
+            type: string
+          description: IpAddress
+
+        
+      requestBody:
+        description: Request Body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Airtel'
+      responses:
+        "200":
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Airtel'
+        "401":
+          $ref: '#/components/responses/401'
+        "409":
+          $ref: '#/components/responses/409'
+        "412":
+          $ref: '#/components/responses/412'
+        "500":
+          $ref: '#/components/responses/500'
+        "501":
+          $ref: '#/components/responses/501'
+
+
+    Airtel:
+      type: object
+      required:
+        
+       - sample
+       - values
+
+      properties:
+        
+           sample:
+              type: string
+              description: sample
+           values:
+              type: string
+              description: values
+           jsj:
+              type: string
+              description: jsj
+

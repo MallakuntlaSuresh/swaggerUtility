@@ -1,0 +1,83 @@
+    XXURL_ValueXX:
+      post:
+        tags:
+        - XXTag_nameXX
+        summary: XXDescription_ValueXX
+        description: XXDescription_ValueXX
+        operationId: XXOperationID_ValueXX
+        parameters:
+        - name: key
+          in: header
+          description: secret key
+          required: true
+          schema:
+            type: string
+            default: XXXXXXXX
+        - name: channelId
+          in: header
+          description: Channel Id
+          required: true
+          schema:
+            type: string
+            default: XXXXXXXX
+        - name: IpAddress
+          in: header
+          description: IP Address
+          required: true
+          schema:
+            type: string
+            default: XXXXXXXX
+        requestBody:
+          description: Request Body
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/RequestPayload'
+          required: true    
+        responses:
+          "200":
+            description: Details Succesfuly Retrived
+            content:
+              '*/*':
+                schema:
+                  $ref: '#/components/schemas/ResponsePayload'
+          "404":
+            description: Data Not Found
+            content:
+              '*/*':
+                schema:
+                  $ref: '#/components/schemas/ResponsePayload'
+          "208":
+            description: Data is not available
+            content:
+              '*/*':
+                schema:
+                  $ref: '#/components/schemas/ResponsePayload'
+          "400":
+            description: Invalid Data Inputs
+            content:
+              '*/*':
+                schema:
+                  $ref: '#/components/schemas/ResponsePayload'
+
+      XXINPUTSchema_NameXX:
+          required:
+          - inputBodyHeader
+          type: object
+          properties:
+            XXINPUT_PROPERSXX
+            inputBodyHeader:
+               $ref: '#/components/schemas/InputBodyHeader'
+               description: Request Body metadata 
+ 
+            
+      XXOUTPUTSchema_NameXX:
+          required:
+          type: object
+          properties:
+            XXOUTPUT_PROPERSXX
+            outputBodyHeader:
+               $ref: '#/components/schemas/OutputBodyHeader'
+               description: Request Body metadata 
+		    
+   

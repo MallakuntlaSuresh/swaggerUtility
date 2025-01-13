@@ -1,0 +1,40 @@
+  XXURL_ValueXX:
+    post:
+      operationId: XXOperationID_ValueXX
+      description: XXDescription_ValueXX
+      summary: XXSummary_ValueXX
+      parameters:
+        XXPARAM_INPUTXX
+        
+      requestBody:
+        description: Request Body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/XXINPUTSchema_NameXX'
+      responses:
+        "200":
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/XXINPUTSchema_NameXX'
+        "401":
+          $ref: '#/components/responses/401'
+        "409":
+          $ref: '#/components/responses/409'
+        "412":
+          $ref: '#/components/responses/412'
+        "500":
+          $ref: '#/components/responses/500'
+        "501":
+          $ref: '#/components/responses/501'
+
+
+    XXINPUTSchema_NameXX:
+      type: object
+      required:
+        XXINPUT_REQPROPERSXX
+      properties:
+        XXINPUT_PROPERSXX
